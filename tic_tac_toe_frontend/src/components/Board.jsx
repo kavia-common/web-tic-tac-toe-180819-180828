@@ -7,7 +7,7 @@ export default function Board({ squares, onSquareClick, winningLine }) {
    * Board component for rendering a 3x3 grid.
    *
    * @param {array} squares - Array of 9 items (X/O/null)
-   * @param {function} onSquareClick - function to handle square click
+   * @param {function} onSquareClick - function to handle square click; will be called only if cell can be clicked
    * @param {array} winningLine - Array of 3 indices for winning cells
    * @returns JSX.Element
    */

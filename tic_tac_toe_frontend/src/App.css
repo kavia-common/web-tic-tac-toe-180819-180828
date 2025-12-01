@@ -40,6 +40,37 @@ body,
   transition: background 0.3s, color 0.3s;
 }
 
+/* Game mode toggle buttons */
+.ttt-mode-btn {
+  margin: 0 2px;
+  font-weight: 600;
+  letter-spacing: 0.022em;
+  border: none;
+  outline: none;
+  box-shadow: var(--ttt-shadow);
+  transition: var(--ttt-transition);
+}
+
+.ttt-mode-btn.selected {
+  filter: brightness(1.05) contrast(1.18);
+  opacity: 1;
+  outline: 2.5px solid #38bdf833;
+}
+.ttt-mode-btn:not(.selected):hover {
+  filter: brightness(1.09) contrast(1.07);
+  opacity: 1;
+}
+
+/* Disabled state fix for squares, gray-out if not clickable */
+.ttt-square:disabled {
+  pointer-events: none;
+  background: #f3f4f6;
+  color: #a1a1aa;
+  border-color: #d1d5db;
+  opacity: 0.6;
+}
+
+
 .theme-toggle {
   position: absolute;
   top: 25px;
